@@ -1,3 +1,16 @@
+Attribution notice by https://github.com/taptoi:
+The code specific to "latent-walker" GUI is a derivative work 
+by https://github.com/taptoi of two works: 
+1. Alias-Free Generative Adversarial Networks (StyleGAN3)
+(https://github.com/NVlabs/stylegan3) NVIDIA Source Code License for StyleGAN3
+2. GANSpace: Discovering Interpretable GAN Controls
+(https://github.com/harskish/ganspace) Apache License v2.0
+All changes are applied to the StyleGAN3 repo and no code was copied or
+otherwise used from the GANSpace repo. Copied and modified source files
+retain the original Copyright notices.
+
+=======================================================================
+
 Copyright (c) 2021, NVIDIA Corporation & affiliates. All rights reserved.
 
 
