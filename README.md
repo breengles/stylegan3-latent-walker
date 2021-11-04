@@ -2,6 +2,7 @@
 This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) for [Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
 
 ## Features:
+- A new GUI Adapted from StyleGAN3 "visualizer" (latent-walker.py)
 - Run Principle Component Analysis on trained StyleGAN3 networks (only 1024 x 1024 supported for now)
 - Save/Load Found vectors
 - Find image features and patterns and control the GAN output by modifying the principal component weights and toggling layers
@@ -10,6 +11,8 @@ This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Inter
 - Assign latents with multiple adjustable edits for keyframes on a timeline
 - Interpolate between edits and latents on a timeline with easing
 - Render the timeline to a video
+
+![Latent Walker GUI](./docs/latent-walker.png)
 
 Tested on: Win 10, RTX3090
 Status: Experimental
