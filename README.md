@@ -39,7 +39,7 @@ python latent_walker.py
 python latent_walker.py ./models/stylegan3-r-ffhq-1024x1024.pkl
 ```
 
-**Tested on: Win 10, RTX3090
+Tested on: Win 10, RTX3090
 
 ## Alias-Free Generative Adversarial Networks (StyleGAN3)<br><sub>Official PyTorch implementation of the NeurIPS 2021 paper</sub>
 
