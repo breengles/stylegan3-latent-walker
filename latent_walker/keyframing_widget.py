@@ -173,7 +173,7 @@ class KeyframingWidget:
                     self.video_capturing = False
 
             
-            if imgui_utils.button('Video', width=viz.button_w * 3, enabled=True):
+            if imgui_utils.button('Render video', width=viz.button_w * 3, enabled=True):
                 self.image_buffer = []
                 self.current_frame = 0
                 self.video_capturing = not self.video_capturing
