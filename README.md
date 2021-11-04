@@ -13,7 +13,7 @@ https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf
 
 ## Features:
 - Run Principle Component Analysis on trained StyleGAN3 networks (only 1024 x 1024 supported for now)
-- A new GUI (latent-walker.py) Adapted from StyleGAN3 interactive visualizer 
+- A new GUI (`latent-walker.py`) Adapted from StyleGAN3 interactive visualizer 
 - Save/Load Found vectors
 - Find image features and patterns and control the GAN output by modifying the principal component weights and toggling layers
 - Multiple feature edits can be accumulated to a single batch edit
@@ -27,7 +27,7 @@ https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf
 https://user-images.githubusercontent.com/19353881/140237998-c2916bd5-18b4-44ff-a221-39f4bcb09a91.mp4
 
 ## Usage
-Default directory for saving and loading PCA vectors and videos is ./pca
+Default directory for saving and loading PCA vectors and videos is `./pca`
 
 ```.bash
 # Run latent-walker:
