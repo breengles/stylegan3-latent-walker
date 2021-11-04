@@ -1,4 +1,4 @@
-## "Latent Walker": A StyleGan3 repo with a custom implementation of GANSpace
+## Latent Walker: A StyleGan3 repo with a custom implementation of GANSpace
 This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) for [Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
 
 ## Features:
