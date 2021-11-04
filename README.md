@@ -1,3 +1,46 @@
+## Latent Walker: A StyleGan3 repo with a custom implementation of GANSpace
+This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) for [Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
+
+**Attribution**<br>
+[GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) <br>
+Erik Härkönen, Aaron Hertzmann, Jaakko Lehtinen, Sylvain Paris
+Aalto University, Adobe Research, NVIDIA <br>
+https://arxiv.org/abs/2004.02546
+
+[Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3) <br>
+Tero Karras, Miika Aittala, Samuli Laine, Erik Härkönen, Janne Hellsten, Jaakko Lehtinen, Timo Aila <br>
+https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf
+
+## Features:
+- Run Principle Component Analysis on trained StyleGAN3 networks (only 1024 x 1024 supported for now)
+- A new GUI (`latent-walker.py`) Adapted from StyleGAN3 interactive visualizer 
+- Save/Load Found vectors
+- Find image features and patterns and control the GAN output by modifying the principal component weights and toggling layers
+- Multiple feature edits can be accumulated to a single batch edit
+- Save/Load found batch edits
+- Assign latents with multiple adjustable edits for keyframes on a timeline
+- Interpolate between edits and latents on a timeline with easing
+- Render the timeline to a video
+
+![Latent Walker GUI](./docs/latent-walker.png)
+
+https://user-images.githubusercontent.com/19353881/140237998-c2916bd5-18b4-44ff-a221-39f4bcb09a91.mp4
+
+## Usage
+Default directory for saving and loading PCA vectors and videos is `./pca`
+
+```.bash
+# Run latent-walker:
+python latent_walker.py
+```
+
+```.bash
+# Run latent-walker with local pretrained network:
+python latent_walker.py ./models/stylegan3-r-ffhq-1024x1024.pkl
+```
+
+Tested on: Win 10, RTX3090
+
 ## Alias-Free Generative Adversarial Networks (StyleGAN3)<br><sub>Official PyTorch implementation of the NeurIPS 2021 paper</sub>
 
 ![Teaser image](./docs/stylegan3-teaser-1920x1006.png)
