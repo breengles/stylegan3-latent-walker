@@ -43,19 +43,18 @@ def run_pca(self, viz, samples):
     # take layer on all samples separately
     s = ws.transpose(0,1)
     print('Perform principle component analysis on ws...')
-    # create principal component matrix vs
+    # Create principal component matrix vs
     # ws has n samples (amount of seeds), each sample has 18 layers with 512 channels each
     # Run PCA on each layer independently producing up to 20 components.
-    # The produced principal directions matrix vs is 18x20x512 (layers x components x channels)
+    # The produced principal component matrix vs is 18x20x512 (layers x components x channels)
     # When moving along a component, we need to add the respective component (multiplied by some factor) 
-    # from vs to the layers channel values
+    # to the channel values of the applicable layer
     layers = 16
     components = 20
     channels = 512
     vs = torch.zeros((layers,components,channels), device = torch.device('cuda'))
-    #skiplayers = 1
     for layer in range(layers):
-        _, _, V = torch.pca_lowrank(s[layer], q=components, center=True) # v is 512x20
+        _, _, V = torch.pca_lowrank(s[layer], q=components, center=True)
         vs[layer] = torch.transpose(V, 0, 1)
 
     self.vs = dnnlib.EasyDict(V=vs.detach().cpu().numpy())
