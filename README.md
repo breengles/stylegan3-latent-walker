@@ -1,6 +1,16 @@
 ## Latent Walker: A StyleGan3 repo with a custom implementation of GANSpace
 This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) for [Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
 
+**Attribution: **<br>
+[GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace)
+Erik Härkönen, Aaron Hertzmann, Jaakko Lehtinen, Sylvain Paris
+Aalto University, Adobe Research, NVIDIA
+https://arxiv.org/abs/2004.02546
+
+[Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
+Tero Karras, Miika Aittala, Samuli Laine, Erik Härkönen, Janne Hellsten, Jaakko Lehtinen, Timo Aila
+https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf
+
 ## Features:
 - A new GUI Adapted from StyleGAN3 "visualizer" (latent-walker.py)
 - Run Principle Component Analysis on trained StyleGAN3 networks (only 1024 x 1024 supported for now)
@@ -16,10 +26,20 @@ This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Inter
 
 https://user-images.githubusercontent.com/19353881/140237998-c2916bd5-18b4-44ff-a221-39f4bcb09a91.mp4
 
+## Usage
+Default directory for saving and loading PCA vectors and videos is ./pca
 
+```.bash
+# Run latent-walker:
+python latent_walker.py
+```
 
-Tested on: Win 10, RTX3090
-Status: Experimental
+```.bash
+# Run latent-walker with local pretrained network:
+python latent_walker.py ./models/stylegan3-r-ffhq-1024x1024.pkl
+```
+
+**Tested on: Win 10, RTX3090
 
 ## Alias-Free Generative Adversarial Networks (StyleGAN3)<br><sub>Official PyTorch implementation of the NeurIPS 2021 paper</sub>
 
