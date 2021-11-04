@@ -38,6 +38,23 @@ python latent_walker.py
 # Run latent-walker with local pretrained network:
 python latent_walker.py ./models/stylegan3-r-ffhq-1024x1024.pkl
 ```
+*Workflow:*
+1. Open Latent Walker
+1. Load a pretrained network
+1. Set the number of PCA samples
+1. Run PCA or load PCA vectors
+1. Save PCA vectors for later use
+1. Perform component and layer edits or load a saved edit
+1. Add multiple edits to the batch by clicking _Add edit_
+1. Delete current batch edit with _Delete edits_
+1. Reset current edit in a batch with _Reset_
+1. Save current edit for later use
+1. Toggle display mode between _Edit Target_, _Original_ and _Keyframing_. Note that Keyframing is only available when keyframes are available.
+1. Add keyframes with _Add keyframe_
+1. Configure target latent and frame number
+1. Add/delete saved batch edits for a keyframe and adjust their strengths
+1. Scrub the timeline or select keyframes to view the results
+1. Render video with _Render video_. Resulting video will be saved to `./pca/video_out.mp4`
 
 Tested on: Win 10, RTX3090
 
