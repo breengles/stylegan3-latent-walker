@@ -12,8 +12,8 @@ Tero Karras, Miika Aittala, Samuli Laine, Erik Härkönen, Janne Hellsten, Jaakk
 https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf
 
 ## Features:
-- A new GUI Adapted from StyleGAN3 "visualizer" (latent-walker.py)
 - Run Principle Component Analysis on trained StyleGAN3 networks (only 1024 x 1024 supported for now)
+- A new GUI (latent-walker.py) Adapted from StyleGAN3 interactive visualizer 
 - Save/Load Found vectors
 - Find image features and patterns and control the GAN output by modifying the principal component weights and toggling layers
 - Multiple feature edits can be accumulated to a single batch edit
