@@ -2,13 +2,13 @@
 This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) for [Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
 
 **Attribution**<br>
-[GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace)
+[GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) <br>
 Erik Härkönen, Aaron Hertzmann, Jaakko Lehtinen, Sylvain Paris
-Aalto University, Adobe Research, NVIDIA
+Aalto University, Adobe Research, NVIDIA <br>
 https://arxiv.org/abs/2004.02546
 
-[Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
-Tero Karras, Miika Aittala, Samuli Laine, Erik Härkönen, Janne Hellsten, Jaakko Lehtinen, Timo Aila
+[Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3) <br>
+Tero Karras, Miika Aittala, Samuli Laine, Erik Härkönen, Janne Hellsten, Jaakko Lehtinen, Timo Aila <br>
 https://nvlabs-fi-cdn.nvidia.com/stylegan3/stylegan3-paper.pdf
 
 ## Features:
