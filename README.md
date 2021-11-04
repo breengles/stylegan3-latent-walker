@@ -14,6 +14,10 @@ This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Inter
 
 ![Latent Walker GUI](./docs/latent-walker.png)
 
+https://user-images.githubusercontent.com/19353881/140237998-c2916bd5-18b4-44ff-a221-39f4bcb09a91.mp4
+
+
+
 Tested on: Win 10, RTX3090
 Status: Experimental
 
