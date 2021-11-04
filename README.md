@@ -1,11 +1,11 @@
-## "Latent Walker": A StyleGan3 repo with a custom port of GANSpace
+## "Latent Walker": A StyleGan3 repo with a custom implementation of GANSpace
 This StyleGAN3 fork adds a custom implementation of [GANSpace: Discovering Interpretable GAN Controls](https://github.com/harskish/ganspace) for [Alias-Free Generative Adversarial Networks (StyleGAN3)](https://github.com/NVlabs/stylegan3)
 
 ## Features:
 - Run Principle Component Analysis on trained StyleGAN3 networks (only 1024 x 1024 supported for now)
 - Save/Load Found vectors
-- Control the GAN output by modifying the principal component weights by toggling layers
-- Multiple edits can be accumulated to a single batch edit
+- Find image features and patterns and control the GAN output by modifying the principal component weights and toggling layers
+- Multiple feature edits can be accumulated to a single batch edit
 - Save/Load found batch edits
 - Assign latents with multiple adjustable edits for keyframes on a timeline
 - Interpolate between edits and latents on a timeline with easing
