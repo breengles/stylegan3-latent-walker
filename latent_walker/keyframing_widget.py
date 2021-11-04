@@ -22,7 +22,6 @@ from gui_utils import imgui_utils
 import os
 import re
 import imageio
-import random
 
 #----------------------------------------------------------------------------
 
@@ -231,8 +230,6 @@ class KeyframingWidget:
             if(len(e.weights) > 0):
                 weights_to += e.weights * e.strength * 0.01
         
-        rnd = 0.01 * (random.random() - 0.5)
-        amount += rnd
         weights_result = (1.0 - amount) * weights_from + amount * weights_to
 
         return dnnlib.EasyDict(layer_weights=weights_result, w0_seeds=[[seed_from, 1-amount], [seed_to, amount]])
