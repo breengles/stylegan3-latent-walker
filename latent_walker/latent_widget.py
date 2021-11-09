@@ -53,9 +53,11 @@ def run_pca(self, viz, samples):
     components = 20
     channels = 512
     vs = torch.zeros((layers,components,channels), device = torch.device('cuda'))
+    # run PCA on the first layer and duplicate results for other layers:
+    _, _, V = torch.pca_lowrank(s[0], q=components, center=True)
+    V_transpose = torch.transpose(V, 0, 1)
     for layer in range(layers):
-        _, _, V = torch.pca_lowrank(s[layer], q=components, center=True)
-        vs[layer] = torch.transpose(V, 0, 1)
+        vs[layer] = V_transpose
 
     self.vs = dnnlib.EasyDict(V=vs.detach().cpu().numpy())
 
@@ -66,7 +68,7 @@ class LatentWidget:
         self.latent     = dnnlib.EasyDict(x=0, y=0, anim=False)
         self.latent_def = dnnlib.EasyDict(self.latent)
         self.step_y     = 100
-        self.samples    = 2000
+        self.samples    = 500000
         self.vs         = dnnlib.EasyDict(V=np.zeros((16, 20, 512)))
         self.save_path  = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'pca', 'pca_vectors.npy'))
 
