@@ -291,7 +291,7 @@ class KeyframingWidget:
 
     def remove_keyframe_if_queued(self):
         if(self.remove_keyframe_queue >= 0):
-            self.keyframes_edits_weights.arr[self.remove_keyframe_queue].pop()
+            self.keyframes_edits_weights.arr.pop(self.remove_keyframe_queue)
             self.remove_keyframe_queue = -1
 
     def queue_edit_for_delete(self, keyframe_idx, edit_idx):
