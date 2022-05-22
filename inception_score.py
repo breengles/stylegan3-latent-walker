@@ -22,7 +22,7 @@ def update_score(inception_score, G, n=1000):
 
 
 @torch.no_grad()
-def main(model_path="pretrained_models/sg3-make-faces.pkl", device="cuda", n=50, k=1000):
+def main(model_path="models/StyleGAN3-R_makeup_512x512.pkl", device="cuda", n=50, k=1000):
     with open(model_path, "rb") as f:
         G = pickle.load(f)["G_ema"].to(device)
         G.eval()

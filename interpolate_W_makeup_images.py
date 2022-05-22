@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 @torch.no_grad()
-def main(model_path="pretrained_models/sg3-make-faces.pkl", num_imgs=10, device="cuda"):
+def main(model_path="models/StyleGAN3-R_makeup_512x512.pkl", num_imgs=10, device="cuda"):
 
     with open(model_path, "rb") as f:
         G = pickle.load(f)["G_ema"].to(device)
