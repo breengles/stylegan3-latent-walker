@@ -22,6 +22,8 @@ from gui_utils import imgui_utils
 import os
 import re
 import imageio
+from PIL import Image
+from uuid import uuid4
 
 #----------------------------------------------------------------------------
 
@@ -177,12 +179,13 @@ class KeyframingWidget:
                 self.image_buffer = []
                 self.current_frame = 0
                 self.video_capturing = not self.video_capturing
-                
 
             imgui.same_line()
-            render_status_message = (self.render_status_labels[1] + self.get_video_out_path() if self.video_capturing
-                                        else self.render_status_labels[0])
+            render_status_message = (self.render_status_labels[1] + self.get_video_out_path() if self.video_capturing else self.render_status_labels[0])
             imgui.text(f"Render status: {render_status_message}")
+            
+            if imgui_utils.button("Save img", width=viz.button_w * 3, enabled=True):
+                Image.fromarray(viz.result.image.astype(np.uint8)).save(f"saved_images/{str(uuid4())}.png")
 
         if self.video_capturing:
             self.image_buffer.append(viz.result.image)
